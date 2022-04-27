@@ -4,19 +4,49 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/text_view"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="1"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center">
+        <TextView
+            android:id="@+id/player_id"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="Player 1"
+            android:textAppearance="?android:textAppearanceLarge"
+            android:layout_gravity="center" />
+        <TextView
+            android:id="@+id/player_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:textAppearanceLarge"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold"
+            android:text="0"/>
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/image_view"
+        android:layout_weight="2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:src="@drawable/dice_1"
         android:layout_gravity="center"/>
-    <Button
-        android:id="@+id/button_view"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="click"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center">
+        <Button
+            android:id="@+id/button_view"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="Roll"/>
+    </LinearLayout>
+
+
 </LinearLayout>
