@@ -11,7 +11,8 @@ import kotlin.random.Random as Random
 
 class MainActivity : AppCompatActivity() {
     val arrayname = arrayOf(0,0,0,0)
-
+    lateinit var player_name: TextView
+    lateinit var player_score: TextView
     var i=0;
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,9 +29,9 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun randomNumber() {
-        val player_name: TextView=findViewById(R.id.player_id)
+        player_name=findViewById(R.id.player_id)
         player_name.text="Player${i+1}"
-        val player_score: TextView=findViewById(R.id.player_score)
+        player_score=findViewById(R.id.player_score)
         player_score.text=arrayname[i].toString()
         val imageView: ImageView=findViewById(R.id.image_view);
         val randomNumber=(Random.nextInt(6)+1)
